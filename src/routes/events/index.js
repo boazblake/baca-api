@@ -10,7 +10,7 @@ router.get('/', (_, res) => {
     res.status(getErrorCode(error))
     return res.json(error)
   }
-
+  console.log('?')
   return getEventsTask().fork(onError, onSuccess)
 })
 

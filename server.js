@@ -36,6 +36,11 @@ app.use((req, _, next) => {
 
 // * Routes * //
 
+app.use('/api/healthz', (req, res) => {
+  console.log('??')
+  return res.json('Im alive!')
+})
+
 app.use('/api/auth', routes.auth)
 app.use('/api/events', routes.events)
 app.use('/api/blogs', routes.blogs)
